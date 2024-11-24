@@ -1,0 +1,26 @@
+{
+    "categories": [
+        {
+            "name": "Fine Motor Skills",
+            "age_range": "2-4",
+            "products": [
+                {
+                    "name": "Therapy Putty Set",
+                    "description": "Great for hand strength and dexterity",
+                    "amazon_link": "",
+                    "affiliate_link": "",
+                    "age_range": "3+",
+                    "price_range": "-15",
+                    "benefits": [
+                        "Improves finger strength",
+                        "Develops pincer grasp",
+                        "Enhances hand coordination"
+                    ],
+                    "image": "therapy_putty.jpg",
+                    "rating": 4.5,
+                    "reviews_count": 1250
+                }
+            ]
+        }
+    ]
+}

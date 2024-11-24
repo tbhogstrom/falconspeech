@@ -1,0 +1,269 @@
+/* 
+ * Falcon Speech - Friendly & Welcoming Stylesheet
+ */
+
+:root {
+    /* Warm, friendly colors */
+    --color-primary: #FF6B6B;         /* Coral pink */
+    --color-primary-light: #FFD93D;   /* Sunny yellow */
+    --color-secondary: #4ECDC4;       /* Soft teal */
+    --color-accent: #95E1D3;          /* Mint green */
+    
+    /* Soft background colors */
+    --color-background: #FFFFFF;
+    --color-background-alt: #FFF9F9;  /* Soft pink background */
+    --color-text: #525252;            /* Softer than black */
+    --color-text-light: #757575;
+    
+    /* Playful accents */
+    --color-bubble-1: #FFE2E2;        /* Light pink */
+    --color-bubble-2: #F6F6F6;        /* Light gray */
+    --color-bubble-3: #E2F0FF;        /* Light blue */
+    
+    /* Typography */
+    --font-primary: 'Comic Sans MS', 'Roundy', sans-serif;  /* More playful font */
+    --font-secondary: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    
+    /* Rounded corners */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    
+    /* Soft shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Base styles with more rounded corners and playful elements */
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Friendly headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Playful buttons */
+.button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Card styles with soft shadows and rounded corners */
+.card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--color-bubble-1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Navigation with rounded elements */
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-bubble-1);
+    color: var(--color-primary);
+}
+
+/* Hero section with playful background */
+.hero {
+    background-color: var(--color-background-alt);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative bubbles */
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero::before {
+    background-color: var(--color-bubble-1);
+    top: -100px;
+    right: -100px;
+}
+
+.hero::after {
+    background-color: var(--color-bubble-3);
+    bottom: -100px;
+    left: -100px;
+}
+
+/* Service cards with icons */
+.service-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid var(--color-bubble-1);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background-color: var(--color-bubble-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form styles with rounded inputs */
+input, textarea, select {
+    border: 2px solid var(--color-bubble-1);
+    border-radius: var(--radius-md);
+    padding: 0.8rem;
+    font-family: var(--font-secondary);
+    transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-bubble-1);
+}
+
+/* Footer with wave pattern */
+.footer {
+    background-color: var(--color-background-alt);
+    padding: 4rem 0 0;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Fun list styles */
+ul:not(.nav-links) {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+ul:not(.nav-links) li::before {
+    content: '•';
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Quote/testimonial styles */
+blockquote {
+    background-color: var(--color-bubble-1);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.2;
+}
+
+/* Resource cards */
+.resource-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 2px dashed var(--color-bubble-1);
+    transition: all 0.2s ease;
+}
+
+.resource-card:hover {
+    border-style: solid;
+    transform: scale(1.02);
+}
+
+/* Accessibility focus styles */
+:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Mobile responsiveness preserved */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+}
