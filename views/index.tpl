@@ -1,16 +1,12 @@
-TEST INDEX PAGE
-{% extends 'base.tpl' %}
-
-{% block content %}
-<div style="color: red;">
-    If you see this in red, template inheritance is working
+% rebase('base.tpl', title=title, active_page=active_page)
+<div class="content">
+    <h1>Welcome to Falcon Speech</h1>
+    <p>Professional speech therapy services in Southeast Portland, serving families with care and dedication.</p>
+    
+    <div class="welcome-points">
+        <p>🏡 Convenient Southeast Portland Location</p>
+        <p>👶 Specialized Pediatric Services</p>
+        <p>✨ Evidence-Based Treatment</p>
+        <p>💙 Family-Centered Care</p>
+    </div>
 </div>
-
-<div>
-    Current URL: {{url('/')}}
-</div>
-
-<div>
-    CSS URL: {{url('static/css/style.css')}}
-</div>
-{% endblock %}
